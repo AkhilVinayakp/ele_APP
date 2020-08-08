@@ -1,0 +1,35 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.7;
+    color: #777;
+    /* appling the padding will not inherit */
+    padding: 20px;
+
+}
+.main{
+    position: relative;
+    height: 100vh;
+}
+.main_header{
+    text-align: center;
+    color: #ff37a9;
+    font-size: 17px;
+}
+form{
+    height: 60vh;
+    width: 60vh;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #d3e2ff;
+    box-shadow: #777777;
+    padding: 30px;
+}
