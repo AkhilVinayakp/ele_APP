@@ -3,27 +3,23 @@
 <head>
 	<title>window</title>
 	<!-- <script type="text/javascript" src="./controls.js"></script> -->
+	<link rel="stylesheet" type="text/css" href="windowStyle.css">
 </head>
 <body>
-	<header class="mainheader">
-		<center>Video Metadata</center>
-	</header>
-	<form>
-	<div class="file_picker">
-		<label>Please select a video file</label><br>
-		<input type="file" name="video_file" accept="video/*">
+	<div class="main">
+		<header class="main_header">
+			Video Metadata
+		</header>
+			<form>
+				<div class="file_picker">
+					<label>Please select a video file</label><br>
+					<input type="file" name="video_file" accept="video/*">
+				</div>
+				<button type="submit">Process</button>
+			</form>
 	</div>
-	<button type="submit">Process</button>
-	</form>
-
 </body>
-<script type="text/javascript">
-	document.querySelector("form").addEventListener('submit', (event)=>{
-		event.preventDefault();
-		const f = document.querySelector("input").files[0];
-		console.log(f);
-		console.log("submitted")
+<script type="text/javascript" src="controls.js">
 
-	})
 </script>
 </html>

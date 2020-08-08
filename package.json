@@ -4,11 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start":"electron ."
+    "start": "electron ."
   },
   "author": "akhil",
   "license": "ISC",
   "dependencies": {
-    "electron": "^9.1.2"
+    "electron": "^9.1.2",
+    "fluent-ffmpeg": "^2.1.2"
   }
 }

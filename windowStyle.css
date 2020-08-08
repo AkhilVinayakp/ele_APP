@@ -16,6 +16,7 @@ body{
 .main{
     position: relative;
     height: 100vh;
+    background: linear-gradient(to right bottom, rgba(255,179,138,0.42), rgba(255,76,41,0.42));
 }
 .main_header{
     text-align: center;
@@ -28,7 +29,7 @@ form{
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -70%);
     background: #d3e2ff;
     box-shadow: #777777;
     padding: 30px;
