@@ -1,10 +1,14 @@
 const electron = require("electron");
 const { app, BrowserWindow, ipcMain } = electron;
 const ffmpeg = require("fluent-ffmpeg")
+
+// variable holds the main window reference
+let mainWindow;
+
 app.on("ready", ()=>{
 	console.log('hello');
 	// creating a sample window with default configuration
-	const mainWindow = new BrowserWindow({
+	 mainWindow = new BrowserWindow({
 		webPreferences:{
 			nodeIntegration:true
 		}
@@ -15,7 +19,10 @@ app.on("ready", ()=>{
 ipcMain.on("getVideoLength",(event,path)=>{
 	console.log("event received")
 	ffmpeg.ffprobe(path, (err, metadata)=>{
-		console.log(metadata.format.duration);
-		console.log("error"+err);
+		// console.log(metadata.format.duration);
+		// console.log("error :"+ err);
+	//	sending the duration back to new channel
+		mainWindow.webContents.send("pushVideoLength", metadata.format.duration)
+
 	});
 })

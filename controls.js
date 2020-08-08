@@ -12,3 +12,7 @@ document.querySelector("form").addEventListener('submit', (event)=>{
 	console.log("submitted")
 
 })
+ipcRenderer.on("pushVideoLength",(event,videoLength)=>{
+	console.log(videoLength);
+	document.getElementById('result').innerHTML  = `video duration is ${videoLength} seconds`;
+})
